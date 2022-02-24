@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zodiac</title>
+    <script>
+        function rotate() {
+            document.querySelector("#img").style.transform = "rotate(240deg)";
+        }
+
+    </script>
+    <style>
+        body {
+            background-image: url("Background.PNG");
+            background-size: cover;
+        }
+
+        nav {
+            float: left;
+            padding: 20px;
+        }
+
+        article {
+            float: top;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .beep_boop {
+            float: right;
+            padding: 20px;
+            width: 45%;
+        }
+
+        video {
+            float: bottom;
+            padding-top: 200
+        }
+
+    </style>
+</head>
+
+<body>
+    <img id="img" src="Signs-of-the-Zodiac-astrology.png" onclick="rotate()" height="950">
+    <section class="beep_boop">
+        <article>
+            <p>
+                Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text
+            </p>
+        </article>
+        <video width="800" autoplay muted loop>
+            <source src="Sagittarius.mp4" type="video/mp4">
+        </video>
+    </section>
+</body>
+
+</html>
