@@ -4,10 +4,13 @@
     <meta charset="utf-8" />
     <title>Zodiac</title>
     <script>
+        var totalrotation = 0;
         function rotate() {
-            document.querySelector("#img").style.transform = "rotate(240deg)";
+            
+            totalrotation+=30
+            var rotate = "rotate(" + totalrotation + "deg)"
+            document.querySelector("#img").style.transform = rotate;
         }
-
     </script>
     <style>
         body {
