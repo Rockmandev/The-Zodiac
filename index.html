@@ -5,12 +5,17 @@
     <title>Zodiac</title>
     <script>
         var totalrotation = 0;
+
         function rotate() {
-            
-            totalrotation+=30
+            totalrotation += 30
             var rotate = "rotate(" + totalrotation + "deg)"
             document.querySelector("#img").style.transform = rotate;
+            var totalsteps = totalrotation/30;
+            var n = totalsteps %12;
+            const constellations = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces",];
+            document.getElementById("name").innerHTML = constellations[n];
         }
+
     </script>
     <style>
         body {
@@ -38,9 +43,14 @@
 
         video {
             float: bottom;
-            padding-top: 200
+            padding-top: 0;
         }
-
+        
+        #name {
+            color: white;
+            font-size: 50;
+            padding-top: 190;
+        }
     </style>
 </head>
 
@@ -52,6 +62,7 @@
                 Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text
             </p>
         </article>
+        <h1 id="name"></h1>
         <video width="800" autoplay muted loop>
             <source src="Sagittarius.mp4" type="video/mp4">
         </video>
