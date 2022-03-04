@@ -10,10 +10,26 @@
             totalrotation += 30
             var rotate = "rotate(" + totalrotation + "deg)"
             document.querySelector("#img").style.transform = rotate;
-            var totalsteps = totalrotation/30;
-            var n = totalsteps %12;
-            const constellations = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces",];
+            var totalsteps = totalrotation / 30;
+            var n = totalsteps % 12;
+            const constellations = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces", ];
+            const videos = [
+                "aries-widder",
+                "taurus",
+                "Gemini",
+                "CancerCrabKrebs",
+                "leo",
+                "virgo-jungfrau",
+                "libra-dieWaage",
+                "scorpius2",
+                "sagittarius2",
+                "Capricornus",
+                "aquarius",
+                "pisces2",
+            ];
             document.getElementById("name").innerHTML = constellations[n];
+            console.log("<source src=\"zodiac sign videos\\" + videos[n] + ".mp4\" type=\"video/mp4\">");
+            document.getElementById("video").innerHTML = "<source src=\"zodiac sign videos\\" + videos[n] + ".mp4\" type=\"video/mp4\">";
         }
 
     </script>
@@ -45,12 +61,13 @@
             float: bottom;
             padding-top: 0;
         }
-        
+
         #name {
             color: white;
             font-size: 50;
             padding-top: 190;
         }
+
     </style>
 </head>
 
@@ -63,8 +80,8 @@
             </p>
         </article>
         <h1 id="name"></h1>
-        <video width="800" autoplay muted loop>
-            <source src="Sagittarius.mp4" type="video/mp4">
+        <video width="800" id="video" autoplay muted loop>
+
         </video>
     </section>
 </body>
