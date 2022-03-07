@@ -5,11 +5,25 @@
     <title>Zodiac</title>
     <script>
         var totalrotation = 0;
-
+function myrotate() {
+  let id = null;
+  const elem = document.querySelector("#img");   
+  let pos = totalrotation - 30;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == totalrotation) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      var rotate = "rotate(" + pos + "deg)"
+      elem.style.transform = rotate;
+    }
+  }
+}
         function rotate() {
-            totalrotation += 30
-            var rotate = "rotate(" + totalrotation + "deg)"
-            document.querySelector("#img").style.transform = rotate;
+            totalrotation = totalrotation + 30
+            myrotate()
             var totalsteps = totalrotation / 30;
             var n = totalsteps % 12;
             const constellations = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces", ];
